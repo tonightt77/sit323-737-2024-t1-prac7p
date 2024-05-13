@@ -21,3 +21,6 @@ spec:
         image: tonight77/week5:1.1.1
         ports:
         - containerPort: 3040
+        env:
+        - name: MONGO_URI
+          value: "mongodb://tonight77:password123@mongo-0.mongo.default.svc.cluster.local:27017,mongo-1.mongo.default.svc.cluster.local:27017,mongo-2.mongo.default.svc.cluster.local:27017/mydatabase?replicaSet=rs0"
